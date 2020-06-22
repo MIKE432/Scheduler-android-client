@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Scheduler-android-client</string>
+    <string name="to_activity_b">To activity b</string>
+    <string name="to_activity_a">To activity a</string>
+    <string name="activity_b">activity b</string>
+    <string name="activity_a">activity a</string>
+    <string name="notifications">Aktualności</string>
+    <string name="movies">Filmy</string>
+    <string name="shopping">Zakupy</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nfc">Nfc</string>
+    <string name="dashboard">Główne</string>
+    <string name="smart_home">Inteligentny dom</string>
 </resources>

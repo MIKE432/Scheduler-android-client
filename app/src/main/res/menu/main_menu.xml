@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:title="@string/dashboard"
+        />
+    <item
+        android:id="@+id/navigation_smart_home"
+        android:enabled="true"
+        android:icon="@drawable/light_icon"
+        android:title="@string/smart_home"
+        />
+    <item
+        android:id="@+id/navigation_nfc"
+        android:enabled="true"
+        android:icon="@drawable/nfc_icon"
+        android:title="@string/nfc"
+        />
+</menu>
