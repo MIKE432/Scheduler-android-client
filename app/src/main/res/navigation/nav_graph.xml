@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.scheduler_android_client.StartFragment"
+        android:name="com.example.scheduler_android_client.main.ui.StartFragment"
         android:label="StartFragment">
         <action
             android:id="@+id/action_startFragment_to_moviesFragment"
@@ -30,26 +30,33 @@
             app:exitAnim="@anim/fragment_close_exit"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_startFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
     </fragment>
     <fragment
         android:id="@+id/moviesFragment"
-        android:name="com.example.scheduler_android_client.MoviesFragment"
+        android:name="com.example.scheduler_android_client.main.ui.MoviesFragment"
         android:label="MoviesFragment" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="com.example.scheduler_android_client.NotificationsFragment"
+        android:name="com.example.scheduler_android_client.main.ui.NotificationsFragment"
         android:label="NotificationsFragment"
         />
     <fragment
         android:id="@+id/shoppingFragment"
-        android:name="com.example.scheduler_android_client.ShoppingFragment"
+        android:name="com.example.scheduler_android_client.main.ui.ShoppingFragment"
         android:label="ShoppingFragment" />
     <fragment
         android:id="@+id/nfcFragment"
-        android:name="com.example.scheduler_android_client.NfcFragment"
+        android:name="com.example.scheduler_android_client.nfc.ui.NfcFragment"
         android:label="NfcFragment" />
     <fragment
         android:id="@+id/smartHomeFragment"
-        android:name="com.example.scheduler_android_client.SmartHomeFragment"
+        android:name="com.example.scheduler_android_client.smart_home.ui.SmartHomeFragment"
         android:label="SmartHomeFragment" />
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.example.scheduler_android_client.main.ui.NotesFragment"
+        android:label="NotesFragment" />
 </navigation>

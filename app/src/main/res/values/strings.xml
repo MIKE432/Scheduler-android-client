@@ -11,4 +11,5 @@
     <string name="nfc">Nfc</string>
     <string name="dashboard">Główne</string>
     <string name="smart_home">Inteligentny dom</string>
+    <string name="notes">Notatki</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.scheduler_android_client
+package com.example.scheduler_android_client.main.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.scheduler_android_client.R
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.movie_types_fragment.*
 import kotlinx.android.synthetic.main.movies_fragment.*
@@ -29,7 +30,8 @@ class MoviesFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        moviesTypesAdapter = MovieTypesAdapter(this)
+        moviesTypesAdapter =
+            MovieTypesAdapter(this)
         viewPager = view.findViewById(R.id.movie_pager)
         viewPager.adapter = moviesTypesAdapter
         TabLayoutMediator(tab_layout, movie_pager) { tab, position ->

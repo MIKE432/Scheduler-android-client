@@ -2,16 +2,21 @@ package com.example.scheduler_android_client
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.scheduler_android_client.R
 import kotlinx.android.synthetic.main.start_activity.*
 
 class StartActivity: AppCompatActivity(R.layout.start_activity) {
+
+    override fun onBackPressed() {
+
+        when(findNavController(R.id.navigationHost).currentDestination?.label) {
+            "StartFragment" -> finish()
+            "NfcFragment" -> finish()
+            "SmartHomeFragment" -> finish()
+            else -> super.onBackPressed()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,21 +25,26 @@ class StartActivity: AppCompatActivity(R.layout.start_activity) {
             when(item.itemId) {
                 R.id.navigation_smart_home -> {
 
-                    findNavController(R.id.navigationHost).navigate(R.id.smartHomeFragment)
-                    true
+                    findNavController(R.id.navigationHost).navigate(
+                        R.id.smartHomeFragment
+                    )
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_dashboard -> {
 
-                    findNavController(R.id.navigationHost).navigate(R.id.startFragment)
-                    true
+                    findNavController(R.id.navigationHost).navigate(
+                        R.id.startFragment
+                    )
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_nfc -> {
-                    findNavController(R.id.navigationHost).navigate(R.id.nfcFragment)
 
-
-                    true
+                    findNavController(R.id.navigationHost).navigate(
+                        R.id.nfcFragment
+                    )
+                    return@setOnNavigationItemSelectedListener true
                 }
-                else -> false
+                else -> return@setOnNavigationItemSelectedListener false
             }
         }
     }
